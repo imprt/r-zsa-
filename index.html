@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazonas Apartman</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff9ef;
+      color: #5d4500;
+    }
+    header {
+      background: linear-gradient(135deg, #fff7e2 60%, #ffe6b0 100%);
+      color: #dfb166;
+      padding: 2rem 1rem 1rem 1rem;
+      text-align: center;
+      box-shadow: 0 5px 24px #e0b04b44;
+    }
+    header {
+	max-width: 600px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+	margin-top: 20px;
+      border-radius: 60px;
+      box-shadow: 0 6px 40px 0 #dfb16633;
+      border: 4px solid #dfb166;
+      background: #fffdf6;
+    }
+    h1 {
+      font-size: 2.7rem;
+      margin-bottom: 0.5rem;
+      color: #c79836;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #fff8e2, 0 0px 1px #fff2c2;
+    }
+    .cim {
+      font-size: 1.12rem;
+      color: #a57e2a;
+      margin-bottom: 1.3rem;
+    }
+    .magy { color: #79590b; margin-top: 0.2rem; font-size: 0.98rem; font-style: italic; margin-bottom: 0.8rem; }
+    nav {
+      background: #fff4dc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1.2rem 1rem;
+      box-shadow: 0 2px 6px #dfb16633;
+      border-bottom: 1.5px solid #dfb166;
+    }
+    nav a {
+      text-decoration: none;
+      color: #a57e2a;
+      font-weight: bold;
+      font-size: 1.13rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #dfb166;
+      text-shadow: 0 0 8px #fff8dc;
+    }
+    .container {
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+      background: #fffef8cc;
+      border-radius: 18px;
+      box-shadow: 0 6px 28px #dfb16617;
+      margin-top: 1.7rem;
+    }
+    h2 {
+      color: #c79836;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #fff8e2, 0 0px 1px #fff2c2;
+      font-size: 1.5rem;
+      margin-top: 2.3rem;
+      margin-bottom: 0.7rem;
+    }
+    /* NYITÓ KÜLSŐ KÉP-GALÉRIA */
+    .nyitokep-galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-bottom: 2.7rem;
+      margin-top: 2.2rem;
+    }
+    .nyitokep-galeria .imgwrap {
+      max-width: 290px;
+      flex: 1 1 220px;
+      text-align: center;
+    }
+    .nyitokep-galeria img {
+      width: 100%;
+      max-width: 270px;
+      border-radius: 18px;
+      box-shadow: 0 6px 26px #dfb16638, 0 2px 12px #fffdf1dd;
+      border: 3px solid #dfb166;
+      background: #fff;
+      cursor: pointer;
+      transition: transform 0.21s, box-shadow 0.23s;
+    }
+    .nyitokep-galeria img:hover {
+      transform: scale(1.045);
+      box-shadow: 0 16px 48px #c798366c, 0 2px 20px #fffbe6;
+      border-color: #e0b04b;
+    }
+    /* Apartman galéria képek */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+      margin-top: 0.6rem;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 270px;
+      border-radius: 18px;
+      box-shadow: 0 6px 26px #dfb16638, 0 2px 12px #fffdf1dd;
+      border: 3px solid #dfb166;
+      background: #fff;
+      cursor: pointer;
+      transition: transform 0.21s, box-shadow 0.23s;
+    }
+    .gallery img:hover {
+      transform: scale(1.045);
+      box-shadow: 0 16px 48px #c798366c, 0 2px 20px #fffbe6;
+      border-color: #e0b04b;
+    }
+    .gallery video {
+      width: 100%; max-width: 400px;
+      border-radius: 18px;
+      box-shadow: 0 6px 26px #dfb16638, 0 2px 12px #fffdf1dd;
+      border: 3px solid #dfb166;
+      background: #fff;
+      cursor: pointer;
+      transition: transform 0.21s, box-shadow 0.23s;
+      margin-bottom: 0.3rem;
+    }
+    .gallery video:hover {
+      transform: scale(1.025);
+      box-shadow: 0 16px 48px #c798366c, 0 2px 20px #fffbe6;
+      border-color: #e0b04b;
+    }
+    #video-szoveg {
+      color: #a07e2c;
+      font-size: 1.13rem;
+      text-align: center;
+      margin: 1.5rem 0 0.4rem 0;
+      letter-spacing: 0.2px;
+    }
+    #video-cim {
+      font-size: 1.4rem;
+      font-family: Georgia, serif;
+      color: #d2ac4c;
+      text-shadow: 0 2px 8px #fffbe3, 0 0 2px #fff5c2;
+      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    #terkep {
+      margin: 2.7rem auto 1.5rem auto;
+      text-align: center;
+    }
+    #terkep h2 {
+      margin-bottom: 1rem;
+      margin-top: 0.8rem;
+      color: #be9730;
+      font-size: 1.18rem;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1px;
+    }
+    #terkep iframe {
+      width: 95vw;
+      max-width: 520px;
+      height: 340px;
+      border: 2.5px solid #dfb166;
+      border-radius: 14px;
+      margin-top: 0.4rem;
+      box-shadow: 0 3px 15px #dfb16622;
+    }
+    /* Elérhetőség blokk */
+    #contact {
+      text-align:center;
+      margin:2.7rem auto 1.1rem auto;
+      color: #a57e2a;
+    }
+    #contact svg {
+      vertical-align:middle;
+      margin-right:2px;
+    }
+    #contact a {
+      color:#826104;
+      text-decoration:none;
+      font-size:1.09rem;
+      font-weight:bold;
+      margin-left:5px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #fff5db;
+      color: #b8932d;
+      margin-top: 2.5rem;
+      font-size: 1.05rem;
+      border-top: 1.5px solid #dfb166;
+      box-shadow: 0 -2px 12px #dfb16616;
+    }
+    @media (max-width: 700px) {
+      .gallery img, .gallery video, .nyitokep-galeria img { max-width: 99vw; }
+      #terkep iframe { max-width: 99vw; }
+      .nyitokep-galeria { flex-direction: column; align-items: center; }
+    }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; align-items: center; }
+      .container { padding: 0.7rem; }
+      .gallery img, .gallery video, .nyitokep-galeria img { max-width: 98vw; }
+      #terkep iframe { max-width: 99vw; }
+      .nyitokep-galeria { flex-direction: column; align-items: center; }
+    }
+    /* LIGHTBOX CSS */
+    #lightbox-bg {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.78);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+      transition: background 0.25s;
+    }
+    #lightbox-bg img,
+    #lightbox-bg video {
+      max-width: 92vw;
+      max-height: 80vh;
+      border-radius: 18px;
+      box-shadow: 0 6px 26px #000a;
+      background: #fff;
+    }
+    #lightbox-close {
+      color: #fff8e6;
+      font-size: 2.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      top: 34px;
+      right: 42px;
+      text-shadow: 0 2px 16px #000, 0 0 3px #fff;
+      z-index: 10000;
+      transition: color 0.18s;
+      user-select: none;
+    }
+    #lightbox-close:hover { color: #ffe19d; }
+    /* INFO-BOX CSS */
+    .info-box {
+      background: #fff4d6;
+      border-left: 6px solid #dfb166;
+      box-shadow: 0 4px 22px #dfb1661e;
+      padding: 1.1em 1.6em 1.1em 1.3em;
+      border-radius: 16px;
+      margin-bottom: 2.3em;
+      margin-top: 1.2em;
+      color: #6b5307;
+      font-size: 1.09em;
+      letter-spacing: 0.1px;
+    }
+    .info-box ul {
+      list-style: "🌿 ";
+      margin-left: 1.2em;
+      margin-top: 0.8em;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+    .info-box li {
+      margin-bottom: 0.3em;
+      font-size: 1em;
+    }
+    /* LÁTNIVALÓK BOX CSS */
+    .latnivalok-box {
+      background: #fffbe9;
+      border-left: 6px solid #e7b85b;
+      box-shadow: 0 3px 20px #dfb1661e;
+      padding: 1.25em 1.8em 1.2em 1.25em;
+      border-radius: 15px;
+      margin-bottom: 2.7em;
+      margin-top: 2.1em;
+      color: #6b5307;
+    }
+    .latnivalok-box h2 {
+      color: #c79836;
+      margin-bottom: 0.75em;
+      margin-top: 0;
+      font-family: 'Georgia', serif;
+      font-size: 1.38em;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #fff8e2, 0 0px 1px #fff2c2;
+    }
+    .latnivalok-cim {
+      font-weight: bold;
+      color: #9e7706;
+      font-size: 1.08em;
+      margin-top: 1.15em;
+      margin-bottom: 0.36em;
+      letter-spacing: 0.3px;
+    }
+    .latni-lista {
+      list-style: "🌸 ";
+      margin-left: 1.0em;
+      margin-bottom: 0.7em;
+      padding-left: 0;
+    }
+    .latni-lista li {
+      margin-bottom: 0.18em;
+      font-size: 1em;
+      color: #71580a;
+      display: flex;
+      align-items: center;
+    }
+    .latni-lista li span {
+      color: #c7a14d;
+      font-size: 0.97em;
+      margin-left: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./amazonas_logo.png" alt="Amazonas Apartman logó" />
+    <h1>Amazonas Apartman</h1>
+    <div class="cim">7394 Magyarhertelend, Vadrózsa utca 10</div>
+  </header>
+  <!-- KÜLSŐ KÉPEK GALÉRIA -->
+  <div class="nyitokep-galeria">
+    <div class="imgwrap"><img src="./apartman.haz.jpg" alt="Apartman utca felől" /><div class="magy">Modern apartmanház Magyarhertelend üdülőövezetében.</div></div>
+    <div class="imgwrap"><img src="./apartman.haz2.jpg" alt="Oldalnézet" /><div class="magy">Zárt, csendes udvar – tökéletes nyugalom.</div></div>
+    <div class="imgwrap"><img src="./apartman.kivulrol.jpg" alt="Bejárat" /><div class="magy">Bejárat, zárt parkoló.</div></div>
+    <div class="imgwrap"><img src="./apartman.kivulrol2.jpg" alt="Udvar oldalról" /><div class="magy">Oldaludvar, természetes árnyék.</div></div>
+    <div class="imgwrap"><img src="./apartman.kivulrol3.jpg" alt="Terasz virágokkal" /><div class="magy">Hangulatos terasz, virágokkal.</div></div>
+    <div class="imgwrap"><img src="./apartman.kint.jpg" alt="Apartman oldalról" /><div class="magy">Családias környezet.</div></div>
+    <div class="imgwrap"><img src="./apartman.kint2.jpg" alt="Apartman udvar" /><div class="magy">Tágas kert.</div></div>
+    <div class="imgwrap"><img src="./apartman.terasz.jpg" alt="Terasz és növények" /><div class="magy">Pihenő terasz virágokkal.</div></div>
+    <div class="imgwrap"><img src="./apartman.grill.piheno.jpg" alt="Kerti grill" /><div class="magy">Kerti pihenő és grillező hely.</div></div>
+  </div>
+  <nav>
+    <a href="#a1">1. apartman</a>
+    <a href="#a2">2. apartman</a>
+    <a href="#a3">3. apartman</a>
+    <a href="#a4">4. apartman</a>
+    <a href="#video">Videó</a>
+    <a href="#terkep">Térkép</a>
+  </nav>
+  <div class="container">
+    <!-- INFO-BOX -->
+    <div class="info-box">
+      <p style="font-size:1.13em; margin-bottom: 0.8em;">
+        <b>Amazonas Apartmanház</b> Magyarhertelend üdülő övezetében, a termálfürdő és szaunapark közvetlen szomszédságában található.<br>
+        Az apartmanház saját <b>zárt parkolóval</b>, hangulatos <b>teraszokkal</b>, <b>grillezővel</b> és <b>külső főzőhellyel</b> várja családos és baráti társaságos vendégeit.
+      </p>
+      <ul>
+        <li>Minden apartman <b>saját fürdővel</b>, TV-vel, internettel és jól felszerelt konyhával rendelkezik</li>
+        <li>Szobák <b>2-3 férőhelyesek</b></li>
+        <li><b>Kedvezmények:</b> 0-3 éves korig <b>100%</b>, 3-14 éves korig <b>50%</b></li>
+        <li><b>Minimum foglalás:</b> 2 fő, 2 éjszaka</li>
+      </ul>
+    </div>
+
+    <!-- Apartman 1 -->
+    <section id="a1">
+      <h2>1-es apartman</h2>
+      <p>3 fős családi apartman jól felszerelt konyhával, pihenő terasszal.</p>
+      <div class="gallery">
+        <img src="./apartman1_szoba.jpg" alt="1-es apartman szoba" />
+        <img src="./apartman1_egyagyas.jpg" alt="1-es apartman egyszemélyes ágy" />
+        <img src="./apartman1_konyha.jpg" alt="1-es apartman konyha" />
+        <img src="./apartman1_furdo.jpg" alt="1-es apartman fürdőszoba" />
+        <img src="./apartman1_terasz.jpg" alt="1-es apartman terasz" />
+      </div>
+    </section>
+    <!-- Apartman 2 -->
+    <section id="a2">
+      <h2>2-es apartman</h2>
+      <p>2 fős apartman, pároknak, - jól felszerelt saját konyhával, pihenő terasszal, grillezési lehetőséggel.</p>
+      <div class="gallery">
+        <img src="./apartman2_franciaagy.jpg" alt="2-es apartman franciaágy" />
+        <img src="./apartman2_nappali.jpg" alt="2-es apartman nappali" />
+        <img src="./apartman2_furdo.jpg" alt="2-es apartman fürdőszoba" />
+        <img src="./apartman2_konyha.jpg" alt="2-es apartman konyha" />
+      </div>
+    </section>
+    <!-- Apartman 3 -->
+    <section id="a3">
+      <h2>3-as apartman</h2>
+      <p>3 fős családi apartman, amely +1 főre pótágyazható, jól felszerelt saját konyhával, pihenő terasszal, grillezési lehetőséggel.</p>
+      <div class="gallery">
+        <img src="./apartman3_franciaagy.jpg" alt="3-as apartman franciaágy" />
+        <img src="./apartman3_egyagyas.jpg" alt="3-as apartman egyszemélyes ágy" />
+        <img src="./apartman3_tv.jpg" alt="3-as apartman TV" />
+        <img src="./apartman3_furdo1.jpg" alt="3-as apartman fürdőszoba 1" />
+        <img src="./apartman3_furdo2.jpg" alt="3-as apartman fürdőszoba 2" />
+        <img src="./apartman3_konyha.jpg" alt="3-as apartman konyha" />
+      </div>
+    </section>
+    <!-- Apartman 4 -->
+    <section id="a4">
+      <h2>4-es apartman</h2>
+      <p>3 fős családi apartman, saját fürdőszobával, konyhával, pihenő terasszal és grillezési lehetőséggel.</p>
+      <div class="gallery">
+        <img src="./apartman4_franciaagy.jpg" alt="4-es apartman franciaágy" />
+        <img src="./apartman4_konyha.jpg" alt="4-es apartman konyha" />
+        <img src="./apartman4_furdo1.jpg" alt="4-es apartman fürdőszoba 1" />
+        <img src="./apartman4_furdo2.jpg" alt="4-es apartman fürdőszoba 2" />
+      </div>
+    </section>
+    <!-- Videó szekció -->
+    <section id="video">
+      <div id="video-cim">Ismerje meg az Amazonas Apartmant videón keresztül!</div>
+      <div id="video-szoveg">
+        Nézze meg a bemutató kisfilmet az apartmanokról, a szobákról és a környezetről!
+      </div>
+      <div class="gallery" style="justify-content: center;">
+        <video src="bemutato.mp4" poster="amazonas_logo.png" controls></video>
+      </div>
+    </section>
+    <!-- Térkép szekció -->
+    <section id="terkep">
+      <h2>Hol található az Amazonas Apartman?</h2>
+      <div style="display: flex; justify-content: center;">
+        <iframe src="https://www.google.com/maps?q=7394+Magyarhertelend,+Vadrózsa+utca+10&output=embed"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+    <!-- LÁTNIVALÓK - SZÉPEN, KIEMELVE -->
+    <div class="latnivalok-box">
+      <h2>Látnivalók a közelben</h2>
+      <div class="latnivalok-cim">Helyben:</div>
+      <ul class="latni-lista">
+        <li>Magyarhertelendi Termál és Szaunapark</li>
+        <li>Napszentéj kilátó</li>
+        <li>Pumptrack pálya</li>
+        <li>Kosárlabda pálya</li>
+        <li>Edző- kondipark (szabadtéri)</li>
+        <li>Játszóterek gyerekeknek</li>
+        <li>Meseház</li>
+        <li>Fájdalmas Anya templom</li>
+      </ul>
+      <div class="latnivalok-cim">Környéken:</div>
+      <ul class="latni-lista">
+        <li>Mecsextrém park <span>(14 km)</span></li>
+        <li>Pécsi Állatkert <span>(20 km)</span></li>
+        <li>Abaligeti cseppkő barlang <span>(7 km)</span></li>
+        <li>Abaligeti Denevérmúzeum <span>(7 km)</span></li>
+        <li>Abaligeti csónakázó és horgásztó <span>(7 km)</span></li>
+        <li>Pécsi tó (Orfű) <span>(4 km)</span></li>
+        <li>Kis tó, horgásztó (Orfű) <span>(4 km)</span></li>
+        <li>Orfűi Malom múzeum <span>(5 km)</span></li>
+        <li>Pécs TV torony <span>(20 km)</span></li>
+        <li>Pécs Dzsámi templom <span>(25 km)</span></li>
+        <li>Pécs Bazilika – Székesegyház <span>(25 km)</span></li>
+        <li>Zsolnay Kulturális központ <span>(26 km)</span></li>
+        <li>Gázi Kászim pasa dzsámija <span>(25 km)</span></li>
+        <li>Vasarely múzeum <span>(25 km)</span></li>
+        <li>Csontváry múzeum <span>(25 km)</span></li>
+      </ul>
+    </div>
+    <!-- ELÉRHETŐSÉG -->
+    <div id="contact">
+      <span style="font-size:1.23rem; color:#be9730; font-weight:bold; letter-spacing:1px;">Kapcsolat</span><br>
+      <span style="display:inline-block;margin:0.5rem 0;">
+        <svg style="vertical-align:middle" height="22" width="22" fill="#b8932d" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.9l7.09 6.37c.26.23.62.23.88 0L20 8.9V18H4z"/>
+        </svg>
+        <a href="mailto:hrozsa8@gmail.com">hrozsa8@gmail.com</a>
+        &nbsp; &nbsp;
+        <svg style="vertical-align:middle" width="20" height="20" fill="#b8932d" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.94-.27c1.01.25 2.09.38 3.19.38a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.1.13 2.18.38 3.19a1 1 0 01-.27.94l-2.2 2.2z"/>
+        </svg>
+        <a href="tel:+36209617067">+36 20 961 7067</a>
+      </span>
+    </div>
+  </div>
+  <!-- LIGHTBOX -->
+  <div id="lightbox-bg" onclick="this.style.display='none'">
+    <span id="lightbox-close" onclick="document.getElementById('lightbox-bg').style.display='none';event.stopPropagation();">&times;</span>
+    <img id="lightbox-img" src="" alt="" style="display:none;" />
+    <video id="lightbox-video" src="" style="display:none;" controls autoplay></video>
+  </div>
+  <footer>
+    <p>&copy; 2025 Amazonas Apartman | Magyarhertelend</p>
+  </footer>
+  <script>
+    // Lightbox minden képre (galéria, nyitókép)
+    document.querySelectorAll('.gallery img, .nyitokep-galeria img').forEach(img => {
+      img.onclick = function(e) {
+        e.stopPropagation();
+        document.getElementById('lightbox-img').src = this.src;
+        document.getElementById('lightbox-img').style.display = '';
+        document.getElementById('lightbox-video').style.display = 'none';
+        document.getElementById('lightbox-bg').style.display = 'flex';
+      }
+    });
+    // Videóra is ugyanaz a lightbox
+    document.querySelectorAll('.gallery video').forEach(video => {
+      video.onclick = function(e) {
+        e.stopPropagation();
+        document.getElementById('lightbox-video').src = this.src;
+        document.getElementById('lightbox-img').style.display = 'none';
+        document.getElementById('lightbox-video').style.display = '';
+        document.getElementById('lightbox-bg').style.display = 'flex';
+      }
+    });
+    // Bezárásnál a videót is állítsuk le
+    document.getElementById('lightbox-bg').onclick = function() {
+      document.getElementById('lightbox-video').pause();
+    };
+    document.getElementById('lightbox-close').onclick = function(e) {
+      document.getElementById('lightbox-bg').style.display = 'none';
+      document.getElementById('lightbox-video').pause();
+      e.stopPropagation();
+    };
+    // ESC gombbal is zárható
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        document.getElementById('lightbox-bg').style.display = 'none';
+        document.getElementById('lightbox-video').pause();
+      }
+    });
+  </script>
+</body>
+</html>
