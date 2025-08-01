@@ -1,0 +1,463 @@
+:root {
+  --main-gold: #dfb166;
+  --light-gold: #c79836;
+  --light-gold2: #c798366c;
+  --secondary-gold: #a57e2a;
+  --soft-beige: #fff9ef;
+  --deep-brown: #dfb16633;
+}
+
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 0;
+    background: var(--soft-beige);
+    color: var(--deep-brown);
+}
+
+header {
+    background: linear-gradient(135deg, #fff7e2 60%, #ffe6b0 100%);
+    color: var(--main-gold);
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    box-shadow: 0 5px 24px var(--deep-brown);
+}
+
+header {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;  
+    margin-top: 20px;
+    border-radius: 60px;
+    box-shadow: 0 6px 40px 0 var(--deep-brown);
+    border: 4px solid var(--main-gold);
+    background: #fffdf6;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.7rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-gold);
+    font-family: 'Raleway', serif;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #fff8e2, 0 0px 1px #fff2c2;
+}
+
+.cim {
+    font-size: 1.12rem;
+    color: var(--secondary-gold);
+    margin-bottom: 1.3rem;
+}
+
+.magy { color: #79590b; margin-top: 0.2rem; font-size: 0.98rem; font-style: italic; margin-bottom: 0.8rem; }
+
+nav {
+    background: #fff4dc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 2px 6px var(--deep-brown);
+    border-bottom: 1.5px solid var(--main-gold);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-gold);
+    font-weight: bold;
+    font-size: 1.13rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--main-gold);
+    text-shadow: 0 0 8px #fff8dc;
+}
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: auto;
+    background: #fffef8cc;
+    border-radius: 18px;
+    box-shadow: 0 6px 28px var(--deep-brown);
+    margin-top: 1.7rem;
+}
+
+h2 {
+    color: var(--light-gold);
+    font-family: 'Raleway', serif;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #fff8e2, 0 0px 1px #fff2c2;
+    font-size: 1.5rem;
+    margin-top: 2.3rem;
+    margin-bottom: 0.7rem;
+}
+
+.foglalas-box {
+  background: #fffaf0;
+  border-left: 6px solid var(--main-gold);
+  border-radius: 16px;
+  padding: 1.4em 1.7em;
+  margin: 2em auto;
+  box-shadow: 0 4px 20px var(--deep-brown);
+  color: #6a4d08;
+  font-size: 1.05em;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.foglalas-box h3 {
+  margin-top: 0;
+  color: var(--secondary-gold);
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.foglalas-box input[type="text"],
+.foglalas-box input[type="email"],
+.foglalas-box input[type="date"] {
+  padding: 0.6em;
+  border: 2px solid var(--main-gold);
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Raleway', sans-serif;
+  background: #fffdf6;
+}
+
+.foglalas-box button {
+  background-color: var(--main-gold);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7em;
+  font-size: 1.05em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.foglalas-box button:hover {
+  background-color: var(--secondary-gold);
+}
+
+.jelmagy {
+  font-weight: bold;
+  color: #a77e1f;
+  margin-bottom: 0.5em;
+}
+
+.jelmagy .szabad {
+  color: green;
+  margin-left: 0.5em;
+}
+
+.jelmagy .foglalt {
+  color: red;
+  margin-left: 1em;
+}
+
+.nyitokep-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-bottom: 2.7rem;
+    margin-top: 2.2rem;
+}
+
+.nyitokep-galeria .imgwrap {
+    max-width: 290px;
+    flex: 1 1 220px;
+    text-align: center;
+}
+
+.nyitokep-galeria img {
+    width: 100%;
+    max-width: 270px;
+    border-radius: 18px;
+    box-shadow: 0 6px 26px var(--deep-brown), 0 2px 12px #fffdf1dd;
+    border: 3px solid var(--main-gold);
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.21s, box-shadow 0.23s;
+}
+
+.nyitokep-galeria img:hover {
+    transform: scale(1.045);
+    box-shadow: 0 16px 48px var(--light-gold2), 0 2px 20px #fffbe6;
+    border-color: #e0b04b;
+}
+
+/* Apartman galéria képek */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 0.6rem;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 270px;
+    border-radius: 18px;
+    box-shadow: 0 6px 26px var(--deep-brown), 0 2px 12px #fffdf1dd;
+    border: 3px solid var(--main-gold);
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.21s, box-shadow 0.23s;
+}
+
+.gallery img:hover {
+    transform: scale(1.045);
+    box-shadow: 0 16px 48px var(--light-gold2), 0 2px 20px #fffbe6;
+    border-color: #e0b04b;
+}
+
+.gallery video {
+    width: 100%; max-width: 400px;
+    border-radius: 18px;
+    box-shadow: 0 6px 26px var(--deep-brown), 0 2px 12px #fffdf1dd;
+    border: 3px solid #dfb166;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.21s, box-shadow 0.23s;
+    margin-bottom: 0.3rem;
+}
+
+.gallery video:hover {
+    transform: scale(1.025);
+    box-shadow: 0 16px 48px var(--light-gold2), 0 2px 20px #fffbe6;
+    border-color: #e0b04b;
+}
+
+#video-szoveg {
+    color: #a07e2c;
+    font-size: 1.13rem;
+    text-align: center;
+    margin: 1.5rem 0 0.4rem 0;
+    letter-spacing: 0.2px;
+}
+
+#video-cim {
+    font-size: 1.4rem;
+    font-family: 'Raleway', serif;
+    color: #d2ac4c;
+    text-shadow: 0 2px 8px #fffbe3, 0 0 2px #fff5c2;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#terkep {
+    margin: 2.7rem auto 1.5rem auto;
+    text-align: center;
+}
+
+#terkep h2 {
+    margin-bottom: 1rem;
+    margin-top: 0.8rem;
+    color: #be9730;
+    font-size: 1.18rem;
+    font-family: 'Raleway', serif;
+    letter-spacing: 1px;
+}
+
+#terkep iframe {
+    width: 95vw;
+    max-width: 520px;
+    height: 340px;
+    border: 2.5px solid var(--main-gold);
+    border-radius: 14px;
+    margin-top: 0.4rem;
+    box-shadow: 0 3px 15px var(--deep-brown);
+}
+
+/* Elérhetőség blokk */
+#contact {
+    text-align:center;
+    margin:2.7rem auto 1.1rem auto;
+    color: var(--secondary-gold);
+}
+
+#contact svg {
+    vertical-align:middle;
+    margin-right:2px;
+}
+
+#contact a {
+    color:#826104;
+    text-decoration:none;
+    font-size:1.09rem;
+    font-weight:bold;
+    margin-left:5px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #fff5db;
+    color: #b8932d;
+    margin-top: 2.5rem;
+    font-size: 1.05rem;
+    border-top: 1.5px solid var(--main-gold);
+    box-shadow: 0 -2px 12px var(--deep-gold);
+}
+
+@media (max-width: 700px) {
+    .gallery img, .gallery video, .nyitokep-galeria img { max-width: 99vw; }
+    #terkep iframe { max-width: 99vw; }
+    .nyitokep-galeria { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 600px) {
+    nav { flex-direction: column; align-items: center; }
+    .container { padding: 0.7rem; }
+    .gallery img, .gallery video, .nyitokep-galeria img { max-width: 98vw; }
+    #terkep iframe { max-width: 99vw; }
+    .nyitokep-galeria { flex-direction: column; align-items: center; }
+}
+
+/* LIGHTBOX CSS */
+#lightbox-bg {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.78);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    transition: background 0.25s;
+}
+
+#lightbox-bg img,
+#lightbox-bg video {
+    max-width: 92vw;
+    max-height: 80vh;
+    border-radius: 18px;
+    box-shadow: 0 6px 26px #000a;
+    background: #fff;
+}
+
+#lightbox-close {
+    color: #fff8e6;
+    font-size: 2.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 34px;
+    right: 42px;
+    text-shadow: 0 2px 16px #000, 0 0 3px #fff;
+    z-index: 10000;
+    transition: color 0.18s;
+    user-select: none;
+}
+
+#lightbox-close:hover { color: #ffe19d; }
+/* INFO-BOX CSS */
+.info-box {
+    background: #fff4d6;
+    border-left: 6px solid var(--main-gold);
+    box-shadow: 0 4px 22px var(--deep-gold);
+    padding: 1.1em 1.6em 1.1em 1.3em;
+    border-radius: 16px;
+    margin-bottom: 2.3em;
+    margin-top: 1.2em;
+    color: #6b5307;
+    font-size: 1.09em;
+    letter-spacing: 0.1px;
+}
+
+.info-box ul {
+    list-style: "🌿 ";
+    margin-left: 1.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.info-box li {
+    margin-bottom: 0.3em;
+    font-size: 1em;
+}
+
+.latnivalok-box {
+    background: #fffbe9;
+    border-left: 6px solid #e7b85b;
+    box-shadow: 0 3px 20px var(--deep-brown);
+    padding: 1.25em 1.8em 1.2em 1.25em;
+    border-radius: 15px;
+    margin-bottom: 2.7em;
+    margin-top: 2.1em;
+    color: #6b5307;
+}
+
+.latnivalok-box h2 {
+    color: var(--light-gold);
+    margin-bottom: 0.75em;
+    margin-top: 0;
+    font-family: 'Raleway', serif;
+    font-size: 1.38em;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #fff8e2, 0 0px 1px #fff2c2;
+}
+
+.latnivalok-cim {
+    font-weight: bold;
+    color: #9e7706;
+    font-size: 1.08em;
+    margin-top: 1.15em;
+    margin-bottom: 0.36em;
+    letter-spacing: 0.3px;
+}
+
+.latni-lista {
+    list-style: "🌸 ";
+    margin-left: 1.0em;
+    margin-bottom: 0.7em;
+    padding-left: 0;
+}
+
+.latni-lista li {
+    margin-bottom: 0.18em;
+    font-size: 1em;
+    color: #71580a;
+    display: flex;
+    align-items: center;
+}
+
+.latni-lista li span {
+    color: #c7a14d;
+    font-size: 0.97em;
+    margin-left: 0.5em;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery img, .nyitokep-galeria img, .gallery video {
+  animation: fadeInUp 0.6s ease-in-out both;
+}
