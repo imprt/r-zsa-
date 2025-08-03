@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amazonas Apartman</title>
+  <title>Amazonas Apartmanház</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <link rel="shortcut icon" href="image/amazonas_logo.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="top-navbar">
+    <div class="logo-container">
+      <a href="index.html"><img src="image/amazonas_logo.png" alt="Amazonas Apartmanház logó" /></a>
+    </div>
+    <div class="nav-links">
+      <a href="#galeria">Galéria</a>
+      <a href="#a1">Apartmanok</a>
+      <a href="#video">Bemutató videó</a>
+      <a href="#terkep">Térkép</a>
+      <a href="#latnivalok">Látnivalók</a>
+    </div>
+    <a href="foglalas.php" class="foglalas-button">Foglalás</a>
+    <button class="menu">☰</button>
+  </div>
+
   <header>
-    <img src="image/amazonas_logo.png" alt="Amazonas Apartmanház logó" />
-    <h1>Amazonas Apartman</h1>
+    <h1>Amazonas Apartmanház</h1>
     <div class="cim">7394 Magyarhertelend, Vadrózsa utca 10</div>
   </header>
-  <div class="nyitokep-galeria">
+
+  <div class="nyitokep-galeria" id="galeria">
     <div class="imgwrap"><img src="image/apartman.haz.jpg" alt="Apartmanház utca felől" /><div class="magy">Modern apartmanház Magyarhertelend üdülőövezetében.</div></div>
     <div class="imgwrap"><img src="image/apartman.haz2.jpg" alt="Oldalnézet" /><div class="magy">Zárt, csendes udvar – tökéletes nyugalom.</div></div>
     <div class="imgwrap"><img src="image/apartman.kivulrol.jpg" alt="Bejárat" /><div class="magy">Bejárat, zárt parkoló.</div></div>
@@ -26,14 +42,14 @@
     <div class="imgwrap"><img src="image/apartman.terasz.jpg" alt="Terasz és növények" /><div class="magy">Pihenő terasz virágokkal.</div></div>
     <div class="imgwrap"><img src="image/apartman.grill.piheno.jpg" alt="Kerti grill" /><div class="magy">Kerti pihenő és grillező hely.</div></div>
   </div>
+  
   <nav>
-    <a href="#a1">1. Apartmanház</a>
-    <a href="#a2">2. Apartmanház</a>
-    <a href="#a3">3. Apartmanház</a>
-    <a href="#a4">4. Apartmanház</a>
-    <a href="#video">Videó</a>
-    <a href="#terkep">Térkép</a>
+    <a href="#a1">1. Apartman</a>
+    <a href="#a2">2. Apartman</a>
+    <a href="#a3">3. Apartman</a>
+    <a href="#a4">4. Apartman</a>
   </nav>
+  
   <div class="container">
     <div class="info-box">
       <p style="font-size:1.13em; margin-bottom: 0.8em;">
@@ -50,7 +66,7 @@
 
     <!-- Apartman 1 -->
     <section id="a1">
-      <h2>1-es Apartmanház</h2>
+      <h2>1-es Apartman</h2>
       <p>3 fős családi apartman jól felszerelt konyhával, pihenő terasszal.</p>
       <div class="gallery">
         <img src="image/apartman1_szoba.jpg" alt="1-es Apartmanház szoba" />
@@ -60,42 +76,45 @@
         <img src="image/apartman1_terasz.jpg" alt="1-es apartman terasz" />
       </div>
     </section>
+    
     <!-- Apartman 2 -->
     <section id="a2">
-      <h2>2-es Apartmanház</h2>
+      <h2>2-es Apartman</h2>
       <p>2 fős apartman, pároknak, - jól felszerelt saját konyhával, pihenő terasszal, grillezési lehetőséggel.</p>
       <div class="gallery">
         <img src="image/apartman2_franciaagy.jpg" alt="2-es Apartmanház franciaágy" />
         <img src="image/apartman2_nappali.jpg" alt="2-es apartman nappali" />
-        <img src="image/apartman2_furdo.jpg" alt="2-es apartman fürdőszoba" />
         <img src="image/apartman2_konyha.jpg" alt="2-es apartman konyha" />
+        <img src="image/apartman2_furdo.jpg" alt="2-es apartman fürdőszoba" />
+        <img src="image/apartman2_furdo2.jpg" alt="2-es apartman fürdőszoba 2" />
       </div>
     </section>
+    
     <!-- Apartman 3 -->
     <section id="a3">
-      <h2>3-as Apartmanház</h2>
+      <h2>3-as Apartman</h2>
       <p>3 fős családi apartman, amely +1 főre pótágyazható, jól felszerelt saját konyhával, pihenő terasszal, grillezési lehetőséggel.</p>
       <div class="gallery">
-        <img src="image/apartman3_franciaagy.jpg" alt="3-as Apartmanház franciaágy" />
+        <img src="image/apartman3_franciaagy.jpg" alt="3-as apartman franciaágy" />
         <img src="image/apartman3_egyagyas.jpg" alt="3-as apartman egyszemélyes ágy" />
         <img src="image/apartman3_tv.jpg" alt="3-as apartman TV" />
-        <img src="image/apartman3_furdo1.jpg" alt="3-as apartman fürdőszoba 1" />
-        <img src="image/apartman3_furdo2.jpg" alt="3-as apartman fürdőszoba 2" />
         <img src="image/apartman3_konyha.jpg" alt="3-as apartman konyha" />
+        <img src="image/apartman3_furdo1.jpg" alt="3-as apartman fürdőszoba 1" />
       </div>
     </section>
+    
     <!-- Apartman 4 -->
     <section id="a4">
-      <h2>4-es Apartmanház</h2>
+      <h2>4-es Apartman</h2>
       <p>3 fős családi apartman, saját fürdőszobával, konyhával, pihenő terasszal és grillezési lehetőséggel.</p>
       <div class="gallery">
-        <img src="image/apartman4_franciaagy.jpg" alt="4-es Apartmanház franciaágy" />
+        <img src="image/apartman4_franciaagy.jpg" alt="4-es apartman franciaágy" />
         <img src="image/apartman4_konyha.jpg" alt="4-es apartman konyha" />
-        <img src="image/apartman4_furdo1.jpg" alt="4-es apartman fürdőszoba 1" />
         <img src="image/apartman4_furdo2.jpg" alt="4-es apartman fürdőszoba 2" />
       </div>
     </section>
 
+    <!-- VIDEÓ -->
     <section id="video">
       <div id="video-cim">Ismerje meg az Amazonas Apartmanházat videón keresztül!</div>
       <div id="video-szoveg">
@@ -106,15 +125,17 @@
       </div>
     </section>
 
+    <!-- TÉRKÉP -->
     <section id="terkep">
-      <h2>Hol találhatóak az Amazonas Apartmanházak?</h2>
+      <h2>Hol találhatóak az Amazonas Apartmanház?</h2>
       <div style="display: flex; justify-content: center;">
         <iframe src="https://www.google.com/maps?q=7394+Magyarhertelend,+Vadrózsa+utca+10&output=embed"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
-    <div class="latnivalok-box">
+    <!-- LAÁTNIVALÓK -->
+    <div id="latnivalok" class="latnivalok-box">
       <h2>Látnivalók a közelben</h2>
       <div class="latnivalok-cim">Helyben:</div>
       <ul class="latni-lista">
@@ -146,6 +167,7 @@
         <li>Csontváry múzeum <span>(25 km)</span></li>
       </ul>
     </div>
+    
     <!-- ELÉRHETŐSÉG -->
     <div id="contact">
       <span style="font-size:1.23rem; color:#be9730; font-weight:bold; letter-spacing:1px;">Kapcsolat</span><br>
@@ -162,6 +184,7 @@
       </span>
     </div>
   </div>
+  
   <!-- LIGHTBOX -->
   <div id="lightbox-bg" onclick="this.style.display='none'">
     <span id="lightbox-close" onclick="document.getElementById('lightbox-bg').style.display='none';event.stopPropagation();">&times;</span>
@@ -174,6 +197,11 @@
   </footer>
 
   <script>
+    document.querySelector('.menu').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      document.querySelector('.foglalas-button').classList.toggle('active');
+    });
+
     document.querySelectorAll('.gallery img, .nyitokep-galeria img').forEach(img => {
       img.onclick = function(e) {
         e.stopPropagation();
@@ -183,6 +211,7 @@
         document.getElementById('lightbox-bg').style.display = 'flex';
       }
     });
+    
     document.querySelectorAll('.gallery video').forEach(video => {
       video.onclick = function(e) {
         e.stopPropagation();
@@ -192,14 +221,17 @@
         document.getElementById('lightbox-bg').style.display = 'flex';
       }
     });
+    
     document.getElementById('lightbox-bg').onclick = function() {
       document.getElementById('lightbox-video').pause();
     };
+    
     document.getElementById('lightbox-close').onclick = function(e) {
       document.getElementById('lightbox-bg').style.display = 'none';
       document.getElementById('lightbox-video').pause();
       e.stopPropagation();
     };
+    
     document.addEventListener('keydown', function(e) {
       if (e.key === "Escape") {
         document.getElementById('lightbox-bg').style.display = 'none';
